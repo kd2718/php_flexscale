@@ -6,3 +6,9 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+.flip-H {
+    display: inline-block;
+    transform: scale(-1, 1);
+}

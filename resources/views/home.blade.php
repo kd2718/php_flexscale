@@ -6,17 +6,17 @@
         <div class="col-12">
             <h3>Welcome Cheri</h3>
         </div>
-        <div class="row mt-5">
-            <div class="col">
-                <div class="card border-primary">
-                  <img class="card-img-top" src="holder.js/100px180/" alt="">
-                  <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
-                  </div>
-                </div>
-                <h4>Here is my Weight</h4>
+    </div>
+    <div class="row mt-5 d-flex align-items-center">
+        <div class="col-5">
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h4>Last Checking: <span class="font-weight-bold">130</span></h4>
+                <h6><span class="font-italic pl-5">taken 2018/12/25</span></h6>
             </div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5">
+            <a href="#" class="btn btn-primary">Weight In!</a>
         </div>
     </div>
 </div>

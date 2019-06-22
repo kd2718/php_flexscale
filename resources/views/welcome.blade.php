@@ -82,13 +82,26 @@
         </div>
         @endif
 
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <h1>Hi there</h1>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    hi again
+                </div>
+            </div>
+        </div>
         <div class="content">
-            <div class="title m-b-md">
+            <div class="title m-b-md float-left text-left">
                 FlexScale
             </div>
 
-           <h2>Make you scale Flex for you ⚖️ 💪</h2> 
-            
+            <h2>Make you Scale ⚖ Flex 💪 for you <span class="flip-H">💪 asdf </span></h2>
+
         </div>
     </div>
 </body>
