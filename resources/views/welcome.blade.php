@@ -43,7 +43,7 @@
         }
 
         .content {
-            text-align: center;
+            text-align: centesr;
         }
 
         .title {
@@ -67,7 +67,7 @@
 </head>
 
 <body>
-    <div class="flex-center position-ref full-height">
+    <div class="zflex-center position-ref full-height">
         @if (Route::has('login'))
         <div class="top-right links">
             @auth
@@ -82,10 +82,10 @@
         </div>
         @endif
 
-        <div class="container">
-            <div class="row">
-                <div class="col-8">
-                    <h1>Hi there</h1>
+        <div class="container m-5 pl-5 m-b-md">
+            <div class="row pl-5">
+                <div class="col-8 m-5">
+                    <div class="title">FlexScale</div>
                 </div>
                 <div class="col-4"></div>
             </div>
