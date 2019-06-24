@@ -82,20 +82,7 @@
         </div>
         @endif
 
-        <div class="container m-5 pl-5 m-b-md">
-            <div class="row pl-5">
-                <div class="col-8 m-5">
-                    <div class="title">FlexScale</div>
-                </div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    hi again
-                </div>
-            </div>
-        </div>
-        <div class="content">
+        <div class="content ml-5">
             <div class="title m-b-md float-left text-left">
                 FlexScale
             </div>
