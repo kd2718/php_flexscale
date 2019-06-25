@@ -18,6 +18,41 @@
             <a href="#" class="btn btn-primary">Weight In!</a>
         </div>
     </div>
+
+    <div class="row mt-5 mb-5"></div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-8">
+            <table class="table table-sm table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2018-12-12</td>
+                        <td>12:21</td>
+                        <td>123</td>
+                        <td><a href="#">Edit Me</a></td>
+                        <td><a href="#">Delete Me</a></td>
+                    </tr>
+                    <tr>
+                        <td>2018-12-11</td>
+                        <td>10:21</td>
+                        <td>125</td>
+                        <td><a href="#">Edit Me</a></td>
+                        <td><a href="#">Delete Me</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-3"></div>
+    </div>
 </div>
 
 @endsection
