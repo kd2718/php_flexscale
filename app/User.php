@@ -54,5 +54,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Profile::class);
     }
+
+    public function checkIns()
+    {
+        return $this->hasMany(CheckIn::class)->orderBy('created_at', 'DESC');
+    }
 }
 
