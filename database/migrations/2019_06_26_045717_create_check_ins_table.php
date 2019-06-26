@@ -16,7 +16,7 @@ class CreateCheckInsTable extends Migration
         Schema::create('check_ins', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('profile_id');
-            $table->unsignedMediumInteger('Weight');
+            $table->unsignedMediumInteger('weight');
             $table->timestamps();
         });
     }
