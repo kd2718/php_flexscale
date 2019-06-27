@@ -45,7 +45,7 @@ class CheckInController extends Controller
         ]);
 
         auth()->user()->profile()->CheckIns()->create([
-            'weight'=>$data['weight']
+            'weight'=>$data['weiht']
         ]);
 
         return redirect("/home");
