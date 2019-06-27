@@ -83,12 +83,12 @@
         @endif
 
         <div class="content ml-5">
-            <div class="title m-b-md float-left text-left">
+            <div class="title m-b-md float-left text-left welcome-title">
                 FlexScale
             </div>
 
-            <h2>Make you Scale ⚖ Flex 💪 for you <span class="flip-H">💪 asdf </span></h2>
 
+            <h2>Make you Scale ⚖ Flex 💪 for you <span class="flip-H">💪</span></h2>
         </div>
     </div>
 </body>
