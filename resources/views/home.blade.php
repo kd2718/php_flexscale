@@ -14,8 +14,23 @@
             </div>
         </div>
         <div class="col-2"></div>
-        <div class="col-5">
-            <a href="#" class="btn btn-primary">Weight In!</a>
+        <div class="col-4 ">
+           <form action="/CheckIn" method="post" class="d-flex">
+
+            @csrf
+            <div class="row form-group">
+                <label for="CheckIn col-form-label">Check In</label>
+                <input type="text" name="CheckIn" id="CheckIn" class="form-control @error('CheckIn') is-invalid @enderror" value="{{old('CheckIn')}}" autocomplete="CheckIn" autofocus>
+                @error('CheckIn')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+
+            </div>
+
+                <button class="btn btn-primary ">Submit Check In</button>
+        </form>
         </div>
     </div>
 

@@ -10,6 +10,11 @@ class Profile extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function CheckIns()
+    {
+        return $this->hasMany(CheckIn::class)->orderBy('created_at', 'DESC');
+    }
 }
 
 
