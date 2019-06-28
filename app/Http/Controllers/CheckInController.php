@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CheckIn;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class CheckInController extends Controller
 {
@@ -44,6 +45,9 @@ class CheckInController extends Controller
            'weight'=>'require|integer|between:50,1000'
         ]);
 
+        dd(auth()->user()->profile()->checkIns()->create([
+            'weight'=>$data['weight']
+        ]));
         auth()->user()->profile()->CheckIns()->create([
             'weight'=>$data['weiht']
         ]);

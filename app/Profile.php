@@ -8,13 +8,11 @@ class Profile extends Model
 {
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\User');
     }
 
-    public function CheckIns()
+    public function checkIns()
     {
-        return $this->hasMany(CheckIn::class)->orderBy('created_at', 'DESC');
+        return $this->hasMany('App\CheckIn');
     }
 }
-
-
