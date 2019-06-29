@@ -2,6 +2,11 @@
 # Created by https://www.gitignore.io/api/laravel,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=laravel,visualstudiocode
 
+############# input here ######################
+_ide_helper.php
+###############################################
+
+
 ### Laravel ###
 /vendor/
 node_modules/

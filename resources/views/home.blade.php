@@ -19,9 +19,7 @@
                 @endif
                 @endforeach
                 @else
-
                 <h4>No Checkins Yet!</h4>
-                <p>not ok</p>
                 @endif
             </div>
         </div>
