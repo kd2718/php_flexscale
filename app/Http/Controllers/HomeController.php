@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $checkIns = auth()->user()->profile->checkIns;
+        return view('home', compact('checkIns'));
     }
 }
