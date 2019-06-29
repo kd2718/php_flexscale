@@ -19,9 +19,9 @@
 
             @csrf
             <div class="row form-group">
-                <label for="CheckIn col-form-label">Check In</label>
-                <input type="text" name="CheckIn" id="CheckIn" class="form-control @error('CheckIn') is-invalid @enderror" value="{{old('CheckIn')}}" autocomplete="CheckIn" autofocus>
-                @error('CheckIn')
+                <label for="weight col-form-label">Check In</label>
+                <input type="number" name="weight" id="weight" class="form-control @error('weight') is-invalid @enderror" value="{{old('weight')}}" autocomplete="weight" autofocus>
+                @error('weight')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>

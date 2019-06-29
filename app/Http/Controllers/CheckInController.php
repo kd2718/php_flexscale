@@ -42,10 +42,12 @@ class CheckInController extends Controller
     {
         // make a new thing
         $data = $request->validate([
-           'weight'=>'require|integer|between:50,1000'
+           'weight'=>['required','integer', 'between:50,1000']
         ]);
 
-        auth()->user()->profile->checkIns()->create(['weight'=>123]);
+        auth()->user()->profile->checkIns()->create([
+            'weight'=>$data['weight']
+        ]);
 
         return redirect("/home");
     }
