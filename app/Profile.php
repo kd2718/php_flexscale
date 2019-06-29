@@ -13,6 +13,6 @@ class Profile extends Model
 
     public function checkIns()
     {
-        return $this->hasMany('App\CheckIn');
+        return $this->hasMany('App\CheckIn')->orderBy('created_at', 'DESC');
     }
 }
