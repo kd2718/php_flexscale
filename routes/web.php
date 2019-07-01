@@ -21,3 +21,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/CheckIn', 'CheckInController@store')->name('CheckIn.store');
+Route::get('/CheckIn/{checkIn}/edit','CheckInController@edit')->name('CheckIn.edit');
+Route::put('CheckIn/{checkIn}', 'CheckInController@update');

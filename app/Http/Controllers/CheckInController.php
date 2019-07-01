@@ -72,7 +72,8 @@ class CheckInController extends Controller
      */
     public function edit(CheckIn $checkIn)
     {
-        //
+
+        return view('checkIn.edit', compact('checkIn'));
     }
 
     /**
@@ -84,7 +85,21 @@ class CheckInController extends Controller
      */
     public function update(Request $request, CheckIn $checkIn)
     {
-        //
+
+         $data = $request->validate([
+           'weight'=>['required','integer', 'between:50,1000'],
+           'created_at'=>['required', 'date', 'before:tomorrow', 'date_format:Y-m-d'],
+           'time_at'=>['required', 'date_format:H:i']
+        ]);
+
+
+        $created_at = date('Y-m-d H:i:00', strtotime($data['created_at'] . ' ' . $data['time_at']));
+
+        $checkIn->update([
+            'weight'=>$data['weight'],
+            'created_at'=>$created_at
+        ]);
+        return redirect('/home');
     }
 
     /**

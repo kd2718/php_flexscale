@@ -63,20 +63,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($checkIns as $checkIn)
                     <tr>
-                        <td>2018-12-12</td>
-                        <td>12:21</td>
-                        <td>123</td>
-                        <td><a href="#">Edit Me</a></td>
+                        <td>{{$checkIn->created_at->format('Y-m-d')}}</td>
+                        <td>{{$checkIn->created_at->format('H:i')}}</td>
+                        <td>{{$checkIn->weight}}</td>
+                        <td><a href="/CheckIn/{{$checkIn->id}}/edit">Edit Me</a></td>
                         <td><a href="#">Delete Me</a></td>
                     </tr>
-                    <tr>
-                        <td>2018-12-11</td>
-                        <td>10:21</td>
-                        <td>125</td>
-                        <td><a href="#">Edit Me</a></td>
-                        <td><a href="#">Delete Me</a></td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
