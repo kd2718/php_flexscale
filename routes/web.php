@@ -24,3 +24,4 @@ Route::post('/CheckIn', 'CheckInController@store')->name('CheckIn.store');
 Route::get('/CheckIn/{checkIn}/edit','CheckInController@edit')->name('CheckIn.edit');
 Route::put('CheckIn/{checkIn}', 'CheckInController@update');
 Route::delete('/CheckIn/{checkIn}', 'CheckInController@destroy');
+Route::get('/CheckIn/{checkIn}', 'CHeckInController@show')->name('CheckIn.show');

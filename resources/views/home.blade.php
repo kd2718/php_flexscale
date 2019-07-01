@@ -68,13 +68,15 @@
                         <td>{{$checkIn->created_at->format('Y-m-d')}}</td>
                         <td>{{$checkIn->created_at->format('H:i')}}</td>
                         <td>{{$checkIn->weight}}</td>
-                        <td><a href="/CheckIn/{{$checkIn->id}}/edit" class="btn">Edit</a></td>
+                        <td><a href="/CheckIn/{{$checkIn->id}}/edit" class="btn"><img src="/storage/icons/006-pencil.32.png" alt="Edit Pencil"></a></td>
                         <td>
+                            <!--
                             <form action="/CheckIn/{{$checkIn->id}}" method="POST">
                                 @method('DELETE')
                                 @csrf
-                                <input type="submit" class="btn btn-danger" value="Delete This">
+                                <div class="binButton"><input type="submit" value="" ></div>
                             </form>
+                        -->
                         </td>
                     </tr>
                     @endforeach
