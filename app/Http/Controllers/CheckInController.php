@@ -58,7 +58,7 @@ class CheckInController extends Controller
      */
     public function show(CheckIn $checkIn)
     {
-        //
+        return view('checkIn.show', compact('checkIn'));
     }
 
     /**
