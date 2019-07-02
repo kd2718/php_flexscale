@@ -50,6 +50,10 @@
 
     <div class="row mt-5 mb-5"></div>
     <div class="row">
+        <div class="col-3"></div>
+        <div class="col-5 d-flex align-items-center">
+            {{$checkIns->links()}}
+        </div>
         <div class="col-1"></div>
         <div class="col-8">
             <table class="table table-sm table-bordered table-hover">

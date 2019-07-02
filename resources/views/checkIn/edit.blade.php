@@ -3,8 +3,10 @@
 @section('content')
 
 <div class="container">
-    <h3>Edit Your CheckIn</h3>
-    <div class="row">
+    <div class="row d-flex justify-content-center">
+        <h3>Edit Your CheckIn</h3>
+    </div>
+    <div class="row d-flex justify-content-center">
         <form action="/CheckIn/{{$checkIn->id}}" method="POST">
             @method('PUT')
             @csrf
@@ -43,18 +45,23 @@
                 @enderror
                 <small id="helpId" class="text-muted">Time of Weight</small>
             </div>
-            <button class="btn btn-primary">Submit</button>
+
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-primary">Submit</button>
+            </div>
         </form>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-5 d-flex justify-content-center">
         <form action="/CheckIn/{{$checkIn->id}}" method="POST">
             @method('DELETE')
             @csrf
             <div class="form-group">
                 <button type="submit" class="btn btn-danger">Delete</button>
-                <a href="/home">Cancel</a>
             </div>
         </form>
+    </div>
+    <div class="row d-flex justify-content-end">
+                <a href="/home" class="font-weight-bold">Cancel</a>
     </div>
 </div>
 

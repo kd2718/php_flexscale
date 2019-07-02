@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\CheckIn;
 
 class HomeController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -23,7 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $checkIns = auth()->user()->profile->checkIns;
+        //$checkIns = auth()->user()->profile->checkIns;
+        $checkIns = CheckIn::where('profile_id', auth()->user()->profile->id)->latest()->paginate(10);
         return view('home', compact('checkIns'));
     }
 }
