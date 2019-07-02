@@ -59,7 +59,6 @@
                         <th scope="col">Time</th>
                         <th scope="col">Weight</th>
                         <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -68,8 +67,7 @@
                         <td>{{$checkIn->created_at->format('Y-m-d')}}</td>
                         <td>{{$checkIn->created_at->format('H:i')}}</td>
                         <td>{{$checkIn->weight}}</td>
-                        <td><a href="/CheckIn/{{$checkIn->id}}/edit" class="btn"><img src="/storage/icons/006-pencil.32.png" alt="Edit Pencil"></a></td>
-                        <td>
+                        <td><a href="/CheckIn/{{$checkIn->id}}/edit" class="btn"><img src="/media/icons/006-pencil.32.png" alt="Edit Pencil"></a></td>
                             <!--
                             <form action="/CheckIn/{{$checkIn->id}}" method="POST">
                                 @method('DELETE')
@@ -77,7 +75,6 @@
                                 <div class="binButton"><input type="submit" value="" ></div>
                             </form>
                         -->
-                        </td>
                     </tr>
                     @endforeach
                 </tbody>

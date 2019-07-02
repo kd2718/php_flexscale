@@ -46,6 +46,16 @@
             <button class="btn btn-primary">Submit</button>
         </form>
     </div>
+    <div class="row mt-5">
+        <form action="/CheckIn/{{$checkIn->id}}" method="POST">
+            @method('DELETE')
+            @csrf
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a href="/home">Cancel</a>
+            </div>
+        </form>
+    </div>
 </div>
 
 @endsection
