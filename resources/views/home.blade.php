@@ -32,7 +32,7 @@
                         <!--<label for="weight col-form-label">Check In</label>-->
                         <input type="number" name="weight" id="weight"
                             class="form-control @error('weight') is-invalid  @enderror" value="{{old('weight')}}"
-                            autocomplete="weight" autofocus placeholder="Enter your Check-in">
+                            autocomplete="weight" autofocus placeholder="Enter your weight">
                         @error('weight')
                         <span class="invalid-feedback " role="alert">
                             <strong>{{ $message }}</strong>
@@ -53,7 +53,7 @@
     <div class="row mt-5 mb-5">
         <div class="col-12">
 
-        <h5>See how you have been doing!</h4>
+        <h5>Enter your wight and it will show up below</h5>
         </div>
     </div>
     <div class="row">
