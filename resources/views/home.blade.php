@@ -4,13 +4,13 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h3>Hello there, {{auth()->user()->name}}</h3>
+            <h3>Howdy, {{auth()->user()->name}}</h3>
         </div>
     </div>
     <div class="row mt-5 d-flex align-items-baseline">
         <div class="col-5 align-items-center align-items-center">
             <div class="d-flex justify-content-between">
-                @if ($checkIns)
+                @if (count($checkIns) >0)
                 @foreach ($checkIns as $checkIn)
                 @if ($loop->first)
                 <h4>Last Checking: <span class="font-italic pl-1">{{$checkIn->created_at->format('Y-m-d') }}</span> at
@@ -23,8 +23,7 @@
                 @endif
             </div>
         </div>
-        <div class="zol-2"></div>
-        <div class="col-6 ">
+        <div class="col-2 ">
 
             <form action="/CheckIn" method="POST" class="form-inline">
                 @csrf
@@ -48,7 +47,15 @@
         </div>
     </div>
 
-    <div class="row mt-5 mb-5"></div>
+    @if (count($checkIns) > 0)
+
+
+    <div class="row mt-5 mb-5">
+        <div class="col-12">
+
+        <h5>See how you have been doing!</h4>
+        </div>
+    </div>
     <div class="row">
         <div class="col-3"></div>
         <div class="col-5 d-flex align-items-center">
@@ -71,14 +78,8 @@
                         <td>{{$checkIn->created_at->format('Y-m-d')}}</td>
                         <td>{{$checkIn->created_at->format('H:i')}}</td>
                         <td>{{$checkIn->weight}}</td>
-                        <td><a href="/CheckIn/{{$checkIn->id}}/edit" class="btn"><img src="/media/icons/006-pencil.32.png" alt="Edit Pencil"></a></td>
-                            <!--
-                            <form action="/CheckIn/{{$checkIn->id}}" method="POST">
-                                @method('DELETE')
-                                @csrf
-                                <div class="binButton"><input type="submit" value="" ></div>
-                            </form>
-                        -->
+                        <td><a href="/CheckIn/{{$checkIn->id}}/edit" class="btn p-0 ml-2"><img
+                                    src="/media/icons/006-pencil.16.png" alt="Edit Pencil"></a></td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -86,6 +87,7 @@
         </div>
         <div class="col-3"></div>
     </div>
+    @endif
 </div>
 
 @endsection

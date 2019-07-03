@@ -58,6 +58,7 @@ class CheckInController extends Controller
      */
     public function show(CheckIn $checkIn)
     {
+        $this->authorize('view', $checkIn);
         return view('checkIn.show', compact('checkIn'));
     }
 
@@ -69,6 +70,7 @@ class CheckInController extends Controller
      */
     public function edit(CheckIn $checkIn)
     {
+        $this->authorize('update', $checkIn);
         return view('checkIn.edit', compact('checkIn'));
     }
 
@@ -81,6 +83,7 @@ class CheckInController extends Controller
      */
     public function update(Request $request, CheckIn $checkIn)
     {
+        $this->authorize('update', $checkIn);
 
          $data = $request->validate([
            'weight'=>['required','integer', 'between:50,1000'],
@@ -106,6 +109,7 @@ class CheckInController extends Controller
      */
     public function destroy(CheckIn $checkIn)
     {
+        $this->authorize('delete', $checkIn);
         $checkIn->delete();
         return redirect('/home');
     }
