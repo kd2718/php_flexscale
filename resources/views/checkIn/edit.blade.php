@@ -25,7 +25,7 @@
                 <label for="created_at">Created At Date</label>
                 <input type="date" name="created_at" id="created_at"
                     class="form-control @error('created_at') is-invalid  @enderror" placeholder="Enter Weight"
-                    aria-describedby="helpId" value="{{old('created_at', $checkIn->created_at->format('Y-m-d'))}}"
+                    aria-describedby="helpId" value="{{old('created_at', $checkIn->created_at->timezone('America/Los_Angeles')->format('Y-m-d'))}}"
                     autofocus>
                 @error('created_at')
                 <span class="invalid-feedback " role="alert">
@@ -37,7 +37,7 @@
                 <label for="time_at">Time Created At Date</label>
                 <input type="time" name="time_at" id="time_at"
                     class="form-control @error('time_at') is-invalid  @enderror" placeholder="Enter Time"
-                    aria-describedby="helpId" value="{{old('time_at', $checkIn->created_at->format('H:i'))}}" autofocus>
+                    aria-describedby="helpId" value="{{old('time_at', $checkIn->created_at->timezone('America/Los_Angeles')->format('H:i'))}}" autofocus>
                 @error('time_at')
                 <span class="invalid-feedback " role="alert">
                     <strong>{{ $message }}</strong>

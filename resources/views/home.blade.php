@@ -13,8 +13,8 @@
                 @if (count($checkIns) >0)
                 @foreach ($checkIns as $checkIn)
                 @if ($loop->first)
-                <h4>Last Checking: <span class="font-italic pl-1">{{$checkIn->created_at->format('Y-m-d') }}</span> at
-                    {{$checkIn->created_at->format('H:i')}}</h4>
+                <h4>Last Checking: <span class="font-italic pl-1">{{$checkIn->created_at->timezone('America/Los_Angeles')->format('Y-m-d') }}</span> at
+                    {{$checkIn->created_at->timezone('America/Los_Angeles')->format('H:i')}}</h4>
                 @break;
                 @endif
                 @endforeach
@@ -75,8 +75,8 @@
                 <tbody>
                     @foreach ($checkIns as $checkIn)
                     <tr>
-                        <td>{{$checkIn->created_at->format('Y-m-d')}}</td>
-                        <td>{{$checkIn->created_at->format('H:i')}}</td>
+                        <td>{{$checkIn->created_at->timezone('America/Los_Angeles')->format('Y-m-d')}}</td>
+                        <td>{{$checkIn->created_at->timezone('America/Los_Angeles')->format('H:i')}}</td>
                         <td>{{$checkIn->weight}}</td>
                         <td><a href="/CheckIn/{{$checkIn->id}}/edit" class="btn p-0 ml-2"><img
                                     src="/media/icons/006-pencil.16.png" alt="Edit Pencil"></a></td>
@@ -86,6 +86,7 @@
             </table>
         </div>
         <div class="col-3"></div>
+        hi: {{Session::get('timezone')}}
     </div>
     @endif
 </div>
